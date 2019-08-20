@@ -1,0 +1,85 @@
+.bottom-sidebar {
+  order: 4;
+  background-color: $light-color;
+  display: flex;
+  flex-wrap: wrap;
+
+  position: relative;
+  padding: $gutter;
+
+  &::before {
+    position: absolute;
+    background-color: lighten($base-color, 34.5%);
+    content: "";
+    top: 14px;
+    right: 14px;
+    bottom: 14px;
+    left: 14px;
+  }
+
+  &__left,
+  &__right {
+    display: flex;
+    align-items: flex-start;
+    border: 5px solid #ffffff;
+    background: linear-gradient(to bottom, #ffffff 0%, #f5f5f5 50%, #eeeeee 100%);
+    position: relative;
+
+
+    @media (max-width: $small) {
+      padding: $gutter;
+      flex: 1 0 100%;
+    }
+
+    img {
+      padding: 0 $gutter $gutter 0;
+    }
+
+    p {
+      color: $base-color;
+      line-height: 1.5em;
+      margin: 0;
+    }
+  }
+
+  &__left {
+    position: relative;
+
+    @media (min-width: $small + 0.1) {
+      padding: 20px $gutter 25px;
+      flex: 1 0 50%;
+      border-right: none;
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      border-right: 1px solid lighten($base-color, 34.5%);
+      content: "";
+      right: 0;
+    }
+  }
+
+  &__right {
+
+    @media (min-width: $small + 0.1) {
+      padding: 20px $gutter 25px;
+      flex: 1 0 50%;
+      border-left: none;
+    }
+
+    img {
+      @media (max-width: $small) {
+        padding: 0 0 $gutter $gutter;
+        order: 2;
+      }
+    }
+
+    p {
+      @media (max-width: $small) {
+        order: 1;
+      }
+    }
+  }
+}

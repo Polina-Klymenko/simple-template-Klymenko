@@ -1,0 +1,32 @@
+main {
+
+  background-color: $light-color;
+
+  @media (min-width: $small + 0.1) {
+    flex: 1 0 calc(100% - 300px);
+    order: 3;
+    padding: 0 20px $gutter $gutter;
+  }
+  @media (max-width: $small) {
+    flex: 1 0 100%;
+    padding: 20px;
+    order: 2;
+  }
+
+  h2 {
+    margin: 10px 0;
+    color: $accent-color;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  p {
+    line-height: 1.75;
+    text-align: justify;
+    color: $base-color;
+
+    i {
+      color: #424242;
+    }
+  }
+}

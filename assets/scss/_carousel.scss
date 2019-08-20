@@ -1,0 +1,129 @@
+.carousel {
+  position: relative;
+  width: 100%;
+  order: 1;
+  padding: $gutter;
+  display: block;
+  background-color: $light-color;
+
+  &-slides {
+    position: relative;
+  }
+
+  .active {
+    position: relative;
+    z-index: 1;
+    opacity: 1;
+  }
+
+  &-slide {
+    border: 7px solid #ffffff;
+    display: flex;
+    position: absolute;
+    top: 0;
+
+    background-image: url(../img/carousel-item-bg.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    @media (max-width: $small) {
+      flex-wrap: wrap;
+    }
+
+    &__image {
+      display: flex;
+      align-items: center;
+      padding: $gutter;
+
+      @media (min-width: $large + 0.1) {
+        flex: 0 0 250px;
+      }
+      @media (max-width: $large) and (min-width: $small + 0.1) {
+        flex: 0 0 220px;
+      }
+      @media (max-width: $small) {
+        flex: 1 0 100%;
+        justify-content: center;
+      }
+
+      img {
+        max-width: 100%;
+      }
+    }
+
+    &__text {
+      @media (min-width: $small + 0.1) {
+        padding: $gutter ($gutter * 2) $gutter $gutter;
+        flex-grow: 1;
+      }
+      @media (max-width: $small) {
+        padding: 0 $gutter $gutter $gutter;
+        flex: 1 0 100%;
+      }
+
+      h3 {
+        color: #ffffff;
+        font-size: 2rem;
+        font-weight: normal;
+
+        @media (min-width: $small + 0.1) {
+          margin: 15px 0;
+          flex-grow: 1;
+        }
+        @media (max-width: $small) {
+          margin: 0 0 $gutter 0;
+          flex: 1 0 100%;
+          text-align: center;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          max-width: calc(100vw - 135px);
+        }
+      }
+
+      p {
+        overflow: hidden;
+        max-height: 70px;
+        font-size: 1em;
+        color: #ffffff;
+        line-height: 1.5;
+
+        @media (min-width: $small + 0.1) {
+          margin-bottom: 15px;
+          text-align: justify;
+          flex-grow: 1;
+        }
+        @media (max-width: $small) {
+          margin: 0;
+          text-align: center;
+          text-overflow: ellipsis;
+        }
+      }
+    }
+  }
+
+  &-buttons {
+    .prev {
+      left: 3px;
+    }
+
+    .next {
+      right: 3px;
+      img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &-button {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+
+    img {
+      margin-top: -15px;
+    }
+  }
+}

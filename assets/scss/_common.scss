@@ -1,0 +1,35 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: verdana, arial, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  background: url(../img/background.jpg);
+  background-position: 50% 0;
+  background-color: #3a3a3a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+
+}
+
+.wrapper {
+  //TODO
+  max-width: 850px;
+  padding: 0 $gutter;
+  flex-grow: 1;
+}
+
+.container {
+  background-color: $light-color;
+  display: flex;
+  flex-wrap: wrap;
+  padding: $gutter;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 50px;
+}

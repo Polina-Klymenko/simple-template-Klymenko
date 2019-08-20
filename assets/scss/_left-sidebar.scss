@@ -1,0 +1,70 @@
+.left-sidebar {
+position: relative;
+background-color: $light-color;
+
+@media (min-width: $small + 0.1) {
+  flex: 1 0 300px;
+  order: 2;
+  padding: 0 $gutter $gutter 20px;
+}
+@media (max-width: $small) {
+  flex: 1 0 100%;
+  padding: 0 20px 20px 20px;
+  order: 3;
+}
+
+&::after {
+  position: absolute;
+  top: $gutter;
+  height: 90%;
+  border-right: 1px solid lighten($base-color, 34.5%);
+  content: "";
+  right: 0;
+}
+
+  h2 {
+    margin: 10px 0;
+    color: $accent-color;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  p {
+    line-height: 1.75;
+    text-align: justify;
+    color: $base-color;
+  }
+
+  ul {
+    color: $base-color;
+    list-style: none;
+    padding-left: 20px;
+
+    li {
+      padding: $gutter/2;
+      position: relative;
+      font-style: italic;
+      line-height: 1.5;
+
+      &::before {
+        position:absolute;
+        content: url(../img/main-list-arrow.png);
+        margin-left: - $gutter;
+      }
+
+      span {
+        position: relative;
+
+        &::after {
+          content: "";
+          height: 1px;
+          background-color: lighten($base-color, 34.5%);
+          position: absolute;
+          right:0;
+          left: 0;
+          bottom: -10px;
+        }
+      }
+    }
+  }
+}

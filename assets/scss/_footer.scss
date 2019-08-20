@@ -1,0 +1,122 @@
+.footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+
+  .wrapper {
+    display: flex;
+    margin-top: 37px;
+    flex-grow: 1;
+
+    @media (max-width: $small) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .twitter {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $small) {
+      flex: 1 0 100%;
+    }
+
+    &__logo {
+      flex: 0 0 55px;
+    }
+
+    &__description {
+      flex: 1 0 100px;
+
+      &-title {
+        display: block;
+        color: #ffffff;
+        font-size: 2rem;
+      }
+
+      &-slogan {
+        color: #727272;
+      }
+    }
+
+    &__post {
+      position: relative;
+      flex: 1 0 calc(100% - 67px);
+      padding: 20px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.4);
+
+      @media (min-width: $xsmall + 0.1) {
+        margin: 12px 30px 30px 37px;
+      }
+      @media (max-width: $xsmall) {
+        margin: 12px 0 30px 37px;
+      }
+
+
+      
+
+      &::before {
+        position: absolute;
+        top: -19px;
+        left: 0;
+        content: url(../img/twitter-speech-bubble.png);
+      }
+
+      &-text {
+        color: $base-color;
+        line-height: 18px;
+      }
+
+      &-date {
+        color: #0b81be;
+        font-style: italic;
+        font-size: 0.83rem;
+      }
+    }
+  }
+
+  &-right {
+
+    @media (max-width: $large) and (min-width: $small + 0.1) {
+      flex: 0 0 40%;
+    }
+
+    @media (max-width: $small) {
+      flex: 1 0 100%;
+    }
+
+    li {
+      font-size: 0.9rem;
+    }
+
+    .copyright {
+      color: #ffffff;
+
+      @media (min-width: $large + 0.1) {
+        margin: 57px 15px 15px 15px;
+        text-align: right;
+      }
+      @media (max-width: $large) and (min-width: $small + 0.1) {
+        margin: 75px 15px 15px 15px;
+        text-align: right;
+      }
+      @media (max-width: $small) {
+        margin: 30px 15px 15px 15px;
+        text-align: center;
+      }
+    }
+
+    .footer-logo {
+      margin: 15px;
+
+      @media (min-width: $small + 0.1) {
+        text-align: right;
+      }
+      }
+      @media (max-width: $small) {
+        text-align: center;
+      }
+    }
+  }
