@@ -1065,6 +1065,10 @@ main p i {
     transition: opacity 0.5s;
     background-color: rgba(0, 0, 0, 0.8);
   }
+  .footer .menu-list {
+    top: initial;
+    bottom: 100%;
+  }
 }
 
 @media (max-width: 850px) {

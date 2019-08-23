@@ -80,6 +80,14 @@
   }
 }
 
+.footer .menu-list {
+
+  @media (max-width: $large + 0.1) {
+    top: initial;
+    bottom: 100%;
+  }
+}
+
 .menu-hamburger {
 
   height: 50px;
